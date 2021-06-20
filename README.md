@@ -3,7 +3,7 @@
 <!-- ![WhatsAppTemplate](fbdeploy.jpeg) -->
 
 ## Create a Twilio Project
-The WhatsApp Template connects your bot to WhatsApp, using [Twilio](www.twilio.com/referral/w9PylM). To use Twilio, the first thing you need to do is create a twilio account and a twilio project. Each Twilio account has an `account_sid` and `auth_token`. You need to keep these safe, you will use them later.
+The WhatsApp Template connects your bot to WhatsApp, using [Twilio](https://www.twilio.com/referral/w9PylM). To use Twilio, the first thing you need to do is create a twilio account and a twilio project. Each Twilio account has an `account_sid` and `auth_token`. You need to keep these safe, you will use them later.
 
 ## Runninng the template
 Inside this repo, there is Flask application on `app.py`. Flask is a Python framework, so to run the app you'll need to install the framework, as well as the Twilio library using `pip install flask twilio`. Inside `app.py` you need to set the `account_sid` and `auth_token` for Twilio. You also need to set `RefreshToken`, `BotID` and `LanguageCode` for the bot you'll be using. The `RefreshToken` can be found on the NLT platform, under Profile -> API -> Refresh token; the `BotID` can be found under Deploy -> Bot ID; and the `LanguageCode` is simple the language of your bot, capitilised (English, IsiZulu, etc)
