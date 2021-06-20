@@ -25,7 +25,7 @@ LanguageCode = '<LanguageCode>'
 def generateIdToken():
     url = "https://dev-botlhale.io/generateAuthToken"
 
-    payload={'REFRESH_TOKEN': RereshToken}
+    payload = {'REFRESH_TOKEN': RereshToken}
  
     response = requests.request("POST", url, data=payload)
     try:
@@ -38,7 +38,7 @@ IdToken = generateIdToken()
 def startConversation(BotID, LanguageCode):
     url = "https://dev-botlhale.io/startConversation"
 
-    payload={
+    payload = {
         'BotID': BotID,
         'LanguageCode': LanguageCode
     }
@@ -59,7 +59,7 @@ def conversationStarted(sender):
 def sendMessage(message, ConversationID):
     url = "https://dev-botlhale.io/message"
 
-    payload={
+    payload = {
         'BotID': BotID,
         'LanguageCode': LanguageCode,
         'ConversationID': ConversationID,
@@ -73,7 +73,6 @@ def sendMessage(message, ConversationID):
     response = requests.request("POST", url, headers=headers, data=payload)
     # try:
     response = response.json()
-    print(response)
 
     # intitaialise twilio messaging response object
     TwilioMessagingResponse = MessagingResponse()
