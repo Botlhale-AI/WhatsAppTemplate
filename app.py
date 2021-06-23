@@ -1,5 +1,4 @@
 from twilio.twiml.messaging_response import MessagingResponse
-from twilio.rest import Client
 
 from flask import Flask, request, render_template
 import requests
@@ -11,11 +10,6 @@ app = Flask(__name__)
 # local non-persistent database
 # use an actual database for persistency, but this will work too
 users = {}
-
-# twillio
-account_sid = '<account_sid>'
-auth_token  = '<auth_token>'
-client      = Client(account_sid, auth_token)
 
 # botlhale 
 RereshToken = '<RereshToken>'
